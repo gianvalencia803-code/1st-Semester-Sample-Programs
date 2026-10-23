@@ -1,0 +1,41 @@
+/******************************************************************************
+
+while loop - ATM
+
+*******************************************************************************/
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    double balance = 50000;
+    double amount;
+    char choice = 'Y';
+    
+    while(choice == 'Y' || choice == 'y'){
+        cout<<"\nBalance: "<< balance <<endl;
+        cout<<"Enter the Withdrawal Amount: ";
+        cin>>amount;
+    
+    //test amount <0 -> invalid amount
+    //test amount > balance -> Insuficient balance
+    //test within range -> withdrawal sucessful
+        
+        if(amount <= 0){
+            cout<<"Inavlid Balance\n";
+        }else{
+            balance -= amount;
+            cout <<"Withdrawal successful\n";
+        }
+        
+        if(balance == 0){
+            cout<<"Account balance is zero\n";
+            break;
+        }
+        
+        cout<<"Withdrawal again (Y/N) ";
+        cin >>choice;
+    }
+    
+    return 0;
+}
