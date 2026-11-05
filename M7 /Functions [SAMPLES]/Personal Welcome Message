@@ -1,0 +1,37 @@
+/******************************************************************************
+
+Personal Welcome Message
+
+Input - Name 
+
+Welcome Name
+Welcome to C++ Programming
+
+welcome 
+
+*******************************************************************************/
+#include <iostream>
+#include <string>
+using namespace std;
+
+//prototyping - lists down the functions
+
+            //paremeters
+void welcome(string name); // function declaration
+
+int main()
+{
+    string name;
+    cout << "Enter your name: ";
+    getline (cin,name);
+    
+    welcome(name);
+
+    return 0;
+}
+
+void welcome(string name) { //function definition
+    cout << "\nWelcome, "<< name <<"!"<<endl;
+    cout <<"Welcome c++ programming "<<endl;
+    
+}
