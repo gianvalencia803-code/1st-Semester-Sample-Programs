@@ -1,0 +1,52 @@
+/******************************************************************************
+
+Exercise 2 (Non-Function)
+
+Write an algorithm and flowchart to accept the necessaary/require input
+from the user to calculate: (a) Area of a circle, (b) Area of a triangle,
+(c) Area of a rectangle, and (d) Area of a Square.
+
+*******************************************************************************/
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    double radius, base, height, length, width, side, ansC, ansT, ansR,ansS;
+        
+    string choice;
+        
+    cout << "Area Calculator\n";
+    cout << "\n 1. Circle \n 2. Triangle \n 3. Rectangle \n 4. Square \n";
+    
+    cout << "\nType the Area to Solve: ";
+        getline (cin, choice);
+
+    if (choice == "Circle") {
+        cout << "Enter Radius(r): ";
+        cin >> radius;
+        ansC = radius * radius;
+        cout << "Result: "<<ansC;
+        
+    }else if (choice == "Triangle") {
+        cout << "Enter Base(b) and Height(h): ";
+        cin >> base >> height;
+        ansT = (base * height)/2;
+        cout << "Result: "<<ansT;
+
+    }else if (choice == "Rectangle") {
+        cout << "Enter Length(l) and Width(w): ";
+        cin >> length >> width;
+        ansR = length * width;
+        cout << "Result: "<<ansR;
+    
+    }else{
+        cout << "Enter Sides(s): ";
+        cin >> side;
+        ansS = side * side;
+        cout << "Result: "<<ansS;
+    }
+
+    return 0;
+}
